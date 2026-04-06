@@ -1,11 +1,11 @@
-# [ACL 2026 Main Conference]Scaling Behaviors of LLM Reinforcement Learning Post-Training
+# Scaling Behaviors of LLM Reinforcement Learning Post-Training
 
 [![Framework](https://img.shields.io/badge/framework-VeRL%20v0.3.1-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Paper](https://img.shields.io/badge/arXiv-2509.25300v3-b31b1b)](https://arxiv.org/abs/2509.25300)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-GURU--MATH--CL-yellow)](https://huggingface.co/datasets/Artemis0430/GURU-MATH-CL)
 
-**An Empirical Study in Mathematical Reasoning**
+**[ACL 2026 Main Conference] An Empirical Study in Mathematical Reasoning**
 
 This repository contains the implementation and experimental code for our paper: *"Scaling Behaviors of LLM Reinforcement Learning Post-Training: An Empirical Study in Mathematical Reasoning"*.
 
