@@ -1,4 +1,4 @@
-# Scaling Behaviors of LLM Reinforcement Learning Post-Training
+# [ACL 2026 Main Conference]Scaling Behaviors of LLM Reinforcement Learning Post-Training
 
 [![Framework](https://img.shields.io/badge/framework-VeRL%20v0.3.1-blue)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
