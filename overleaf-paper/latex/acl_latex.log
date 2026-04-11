@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.7)  12 APR 2026 00:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.7)  12 APR 2026 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,7 +964,7 @@ Package pdftex.def Info: ./figures/outputs/outputs/llama_paper_llama-instruct_ho
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6 <./figures/outputs/outputs/coefficient_k_intramodel_C.pdf> <./figures/outputs/outputs/coefficient_k_intramodel_D.pdf> <./figures/outputs/outputs/llama_paper_llama-instruct_holdout_N_C_raw_ErrRate.pdf> <./figures/outputs/outputs/llama_paper_llama-instruct_holdout_N_E_ErrRate.pdf>]
-<./figures/datareuse/fit_exp2-base_holdout_Tau_step_ErrRate.pdf, id=996, 426.50467pt x 282.08325pt>
+<./figures/datareuse/fit_exp2-base_holdout_Tau_step_ErrRate.pdf, id=998, 426.50467pt x 282.08325pt>
 File: ./figures/datareuse/fit_exp2-base_holdout_Tau_step_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/datareuse/fit_exp2-base_holdout_Tau_step_ErrRate.pdf>
 Package pdftex.def Info: ./figures/datareuse/fit_exp2-base_holdout_Tau_step_ErrRate.pdf  used on input line 213.
@@ -974,7 +974,7 @@ Underfull \hbox (badness 1616) in paragraph at lines 219--220
 []\T1/ptm/m/n/10.95 (+20) Under this ex-per-i-men-tal setup, our re-sults
  []
 
-<./figures/outputs/outputs/crossdomain_instruct_ErrRate_vs_N.pdf, id=1000, 1148.42233pt x 572.94728pt>
+<./figures/outputs/outputs/crossdomain_instruct_ErrRate_vs_N.pdf, id=1002, 1148.42233pt x 572.94728pt>
 File: ./figures/outputs/outputs/crossdomain_instruct_ErrRate_vs_N.pdf Graphic file (type pdf)
 <use ./figures/outputs/outputs/crossdomain_instruct_ErrRate_vs_N.pdf>
 Package pdftex.def Info: ./figures/outputs/outputs/crossdomain_instruct_ErrRate_vs_N.pdf  used on input line 227.
@@ -1005,13 +1005,13 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 61--74
  [][] 
  []
 
-<./figures/datareuse/exp2_tau_rectangles.pdf, id=1334, 570.93298pt x 397.485pt>
+<./figures/datareuse/exp2_tau_rectangles.pdf, id=1336, 570.93298pt x 397.485pt>
 File: ./figures/datareuse/exp2_tau_rectangles.pdf Graphic file (type pdf)
 <use ./figures/datareuse/exp2_tau_rectangles.pdf>
 Package pdftex.def Info: ./figures/datareuse/exp2_tau_rectangles.pdf  used on input line 83.
 (pdftex.def)             Requested size: 208.13115pt x 144.90189pt.
 [12]
-<./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_ErrRate.pdf, id=1356, 426.50467pt x 282.08325pt>
+<./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_ErrRate.pdf, id=1358, 426.50467pt x 282.08325pt>
 File: ./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_ErrRate.pdf>
 Package pdftex.def Info: ./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_ErrRate.pdf  used on input line 92.
@@ -1020,38 +1020,38 @@ Package pdftex.def Info: ./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_
 Underfull \vbox (badness 1596) has occurred while \output is active []
 
  [13 <./figures/datareuse/exp2_tau_rectangles.pdf>]) (./sections/appendix/full_results.tex
-<./figures/allmetric/all_base_E_ErrRate.pdf, id=1379, 722.7pt x 722.7pt>
+<./figures/allmetric/all_base_E_ErrRate.pdf, id=1381, 722.7pt x 722.7pt>
 File: ./figures/allmetric/all_base_E_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/allmetric/all_base_E_ErrRate.pdf>
 Package pdftex.def Info: ./figures/allmetric/all_base_E_ErrRate.pdf  used on input line 5.
 (pdftex.def)             Requested size: 318.66948pt x 318.67268pt.
-<./figures/allmetric/all_instruct_E_ErrRate.pdf, id=1382, 722.7pt x 722.7pt>
+<./figures/allmetric/all_instruct_E_ErrRate.pdf, id=1384, 722.7pt x 722.7pt>
 File: ./figures/allmetric/all_instruct_E_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/allmetric/all_instruct_E_ErrRate.pdf>
 Package pdftex.def Info: ./figures/allmetric/all_instruct_E_ErrRate.pdf  used on input line 29.
 (pdftex.def)             Requested size: 318.66948pt x 318.67268pt.
  [14 <./figures/allmetric/all_base_E_ErrRate.pdf> <./figures/datareuse/fit_exp2-instruct_holdout_Tau_step_ErrRate.pdf>]
-<./figures/grpo/grpo_base_holdout_rollout_n_C_raw_ErrRate.pdf, id=1544, 426.89952pt x 254.09367pt>
+<./figures/grpo/grpo_base_holdout_rollout_n_C_raw_ErrRate.pdf, id=1546, 426.89952pt x 254.09367pt>
 File: ./figures/grpo/grpo_base_holdout_rollout_n_C_raw_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/grpo/grpo_base_holdout_rollout_n_C_raw_ErrRate.pdf>
 Package pdftex.def Info: ./figures/grpo/grpo_base_holdout_rollout_n_C_raw_ErrRate.pdf  used on input line 44.
 (pdftex.def)             Requested size: 218.51521pt x 130.06294pt.
-<./figures/grpo/grpo_base_holdout_rollout_n_E_ErrRate.pdf, id=1545, 426.50217pt x 253.14952pt>
+<./figures/grpo/grpo_base_holdout_rollout_n_E_ErrRate.pdf, id=1547, 426.50217pt x 253.14952pt>
 File: ./figures/grpo/grpo_base_holdout_rollout_n_E_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/grpo/grpo_base_holdout_rollout_n_E_ErrRate.pdf>
 Package pdftex.def Info: ./figures/grpo/grpo_base_holdout_rollout_n_E_ErrRate.pdf  used on input line 51.
 (pdftex.def)             Requested size: 218.51521pt x 129.6994pt.
-<./figures/grpo/grpo_instruct_holdout_rollout_n_C_raw_ErrRate.pdf, id=1546, 426.58557pt x 254.09367pt>
+<./figures/grpo/grpo_instruct_holdout_rollout_n_C_raw_ErrRate.pdf, id=1548, 426.58557pt x 254.09367pt>
 File: ./figures/grpo/grpo_instruct_holdout_rollout_n_C_raw_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/grpo/grpo_instruct_holdout_rollout_n_C_raw_ErrRate.pdf>
 Package pdftex.def Info: ./figures/grpo/grpo_instruct_holdout_rollout_n_C_raw_ErrRate.pdf  used on input line 61.
 (pdftex.def)             Requested size: 218.51521pt x 130.15599pt.
-<./figures/grpo/grpo_instruct_holdout_rollout_n_E_ErrRate.pdf, id=1547, 426.50217pt x 253.14952pt>
+<./figures/grpo/grpo_instruct_holdout_rollout_n_E_ErrRate.pdf, id=1549, 426.50217pt x 253.14952pt>
 File: ./figures/grpo/grpo_instruct_holdout_rollout_n_E_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/grpo/grpo_instruct_holdout_rollout_n_E_ErrRate.pdf>
 Package pdftex.def Info: ./figures/grpo/grpo_instruct_holdout_rollout_n_E_ErrRate.pdf  used on input line 68.
 (pdftex.def)             Requested size: 218.51521pt x 129.6994pt.
-<./figures/outputs/outputs/direct_lines_base_instruct_holdout_E_N_ErrRate.pdf, id=1550, 425.95636pt x 282.25136pt>
+<./figures/outputs/outputs/direct_lines_base_instruct_holdout_E_N_ErrRate.pdf, id=1552, 425.95636pt x 282.25136pt>
 File: ./figures/outputs/outputs/direct_lines_base_instruct_holdout_E_N_ErrRate.pdf Graphic file (type pdf)
 <use ./figures/outputs/outputs/direct_lines_base_instruct_holdout_E_N_ErrRate.pdf>
 Package pdftex.def Info: ./figures/outputs/outputs/direct_lines_base_instruct_holdout_E_N_ErrRate.pdf  used on input line 92.
@@ -1083,12 +1083,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
  []
 
 ) (./sections/appendix/LossDecompositionModel.tex [17] [18]
-<figures/fit_xh/fit_v3_inter_base_holdout_N_E_ErrRate.pdf, id=1928, 426.50467pt x 282.05751pt>
+<figures/fit_xh/fit_v3_inter_base_holdout_N_E_ErrRate.pdf, id=1930, 426.50467pt x 282.05751pt>
 File: figures/fit_xh/fit_v3_inter_base_holdout_N_E_ErrRate.pdf Graphic file (type pdf)
 <use figures/fit_xh/fit_v3_inter_base_holdout_N_E_ErrRate.pdf>
 Package pdftex.def Info: figures/fit_xh/fit_v3_inter_base_holdout_N_E_ErrRate.pdf  used on input line 65.
 (pdftex.def)             Requested size: 218.51521pt x 144.51021pt.
-<figures/fit_xh/fit_v3_intra_base_holdout_N_C_raw_ErrRate.pdf, id=1929, 426.50467pt x 283.00166pt>
+<figures/fit_xh/fit_v3_intra_base_holdout_N_C_raw_ErrRate.pdf, id=1931, 426.50467pt x 283.00166pt>
 File: figures/fit_xh/fit_v3_intra_base_holdout_N_C_raw_ErrRate.pdf Graphic file (type pdf)
 <use figures/fit_xh/fit_v3_intra_base_holdout_N_C_raw_ErrRate.pdf>
 Package pdftex.def Info: figures/fit_xh/fit_v3_intra_base_holdout_N_C_raw_ErrRate.pdf  used on input line 72.
@@ -1112,12 +1112,12 @@ Underfull \hbox (badness 3098) in paragraph at lines 132--134
  []
 
 ) (./sections/appendix/ResponseLength.tex
-<./figures/outputs/outputs/response_base_response_length_N_E_R.pdf, id=2059, 425.26524pt x 281.36806pt>
+<./figures/outputs/outputs/response_base_response_length_N_E_R.pdf, id=2061, 425.26524pt x 281.36806pt>
 File: ./figures/outputs/outputs/response_base_response_length_N_E_R.pdf Graphic file (type pdf)
 <use ./figures/outputs/outputs/response_base_response_length_N_E_R.pdf>
 Package pdftex.def Info: ./figures/outputs/outputs/response_base_response_length_N_E_R.pdf  used on input line 6.
 (pdftex.def)             Requested size: 219.08614pt x 144.95554pt.
-<./figures/outputs/outputs/response_instruct_response_length_N_E_R.pdf, id=2060, 425.26524pt x 281.36806pt>
+<./figures/outputs/outputs/response_instruct_response_length_N_E_R.pdf, id=2062, 425.26524pt x 281.36806pt>
 File: ./figures/outputs/outputs/response_instruct_response_length_N_E_R.pdf Graphic file (type pdf)
 <use ./figures/outputs/outputs/response_instruct_response_length_N_E_R.pdf>
 Package pdftex.def Info: ./figures/outputs/outputs/response_instruct_response_length_N_E_R.pdf  used on input line 13.
@@ -1138,7 +1138,7 @@ Package rerunfilecheck Info: File `acl_latex.out' has not changed.
 Here is how much of TeX's memory you used:
  38124 strings out of 469515
  777520 string characters out of 5469774
- 1201392 words of memory out of 5000000
+ 1201393 words of memory out of 5000000
  65493 multiletter control sequences out of 15000+600000
  708320 words of font info for 440 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1147,9 +1147,9 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  </home/tanzelin-p/.TinyTeX/texmf-var/fonts/pk/modeless/unknown/unknown/fa5brands0.720pk></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb></home/tanzelin-p/.TinyTeX/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on acl_latex.pdf (21 pages, 1353388 bytes).
+Output written on acl_latex.pdf (21 pages, 1354038 bytes).
 PDF statistics:
- 2291 PDF objects out of 2487 (max. 8388607)
+ 2293 PDF objects out of 2487 (max. 8388607)
  891 compressed objects within 9 object streams
  171 named destinations out of 1000 (max. 500000)
  73769 words of extra memory for PDF output out of 74296 (max. 10000000)
