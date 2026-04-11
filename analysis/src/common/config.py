@@ -174,6 +174,7 @@ COLOR_MAPPING = {
     8e9: '#27ad81',    # 绿青
     14e9: '#2c728e',   # 蓝绿
     32e9: '#5a67a8',   # 蓝紫
+    70e9: '#440154',   # 深紫 (Llama 70B)
     72e9: '#440154',   # 深紫 (最大，最深)
     # for data dup factor / slice factor (从小到大：深到浅，slice factor越小数据越稀疏用更深色)
     # for data dup factor / slice factor (彩虹配色：从紫到红)

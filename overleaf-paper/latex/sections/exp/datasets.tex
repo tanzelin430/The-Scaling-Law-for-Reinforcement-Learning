@@ -1,0 +1,27 @@
+\subsection{Datasets}
+
+\textbf{Training Data} Our training corpus consists exclusively of the mathematics subset from the \texttt{guru-RL-92k} dataset, part of the Reasoning360 project\citep{cheng2025revisiting}. We directly leverage this pre-existing resource due to its rigorous curation process. The dataset's creators employed aggressive substring-based deduplication and a difficulty-based filtering method, which selected problems based on a baseline model's performance to ensure a high-quality and appropriately challenging training distribution. We further reorganized the dataset in the order of increasing difficulty (i.e., decreasing passrate), so as to enable the adoption of a curriculum learning paradigm for the training process.
+
+\textbf{Evaluation Suite} Our evaluation is twofold. To derive scaling laws, we use a held-out set of 500 in-domain mathematics problems, sampled from the full dataset prior to training while preserving the original difficulty distribution. To assess generalization, we use a broader suite of benchmarks, covering mathematics, code generation, logical reasoning, and science, as detailed in Table~\ref{tab:eval_suite}.
+
+\begin{table}[h]
+\centering
+\caption{Composition of the multi-domain evaluation suite.}
+\label{tab:eval_suite}
+\begin{tabular}{lrll}
+\toprule
+\textbf{Dataset} & \textbf{Samples} & \textbf{Data Source} & \textbf{Domain} \\
+\midrule
+Held-out Data & 500 & DeepScaler \& DAPO & Math \\
+aime2024 & 30 & aime2024 & Math \\
+amc2023 & 40 & aimeamc2023 & Math \\
+codegen\_humaneval & 164 & codegen/humaneval & Code \\
+gsm8k & 1319 & openai/gsm8k & Math \\
+logic\_zebra\_puzzle & 200 & logic/zebra\_puzzle & Logical Reasoning \\
+math & 500 & math/math & Math \\
+stem\_supergpqa & 200 & stem/supergpqa & STEM \\
+\midrule
+\textbf{Total} & \textbf{2953} & & \\
+\bottomrule
+\end{tabular}
+\end{table}

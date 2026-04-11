@@ -1,0 +1,61 @@
+\section{Ablation Study on non-critical variables  (xiaohang)} 
+To verify the generality of our identified scaling laws, we conduct a series of ablation studies. The goal is to determine whether the fundamental power-law relationship holds when altering key variables that are not the primary focus of our scaling analysis---namely, the initial state of the model and the underlying model architecture. By showing that the scaling dynamics are robust to these changes, we can strengthen the claim that our findings represent a more general principle of RL-based post-training.
+% reference:\url{https://arxiv.org/pdf/2508.21188v2}
+\subsection{Base or instruct model (Add to main result as a Parallel)} 
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!30!white, title=Observation 1]
+Our results show similar qualitative conclusions for both base and instruct, plus some specific qualitative results, such as learning speed and convergence analysis.
+\end{tcolorbox}
+
+An important factor in any fine-tuning process is the model's initial state. To investigate its impact, we compare the scaling behavior when starting from a base pre-trained model versus its instruction-tuned counterpart. The instruction-tuned model has already undergone supervised fine-tuning (SFT) to improve its ability to follow commands, giving it a significant performance advantage before RL training begins.
+
+For this experiment, we subjected both the Qwen2.5-7B-Base and Qwen2.5-7B-Instruct models to the same RL fine-tuning protocol. The results are presented in Figure~\ref{fig:fit_base_holdout_N_E_C_R_ErrRate}. While the instruction-tuned model began with a significantly higher initial performance (i.e., a lower initial error rate), both models exhibited nearly identical scaling trajectories once RL training commenced. The error rate for both models decreased following a consistent power law.
+
+
+\begin{figure*}[htbp]
+  \centering
+  % -------- Row 1 --------
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{iclr2026/figures/fit/fit_base_holdout_N_C_R.pdf}
+    \label{fig:raw_compute_reward}
+    \caption{Compute (Flops, log) — Reward}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{iclr2026/figures/fit/fit_base_holdout_N_E_R.pdf}
+    \caption{Data size (log) — Reward}
+  \end{subfigure}
+  \par\medskip 
+  % -------- Row 2 --------
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{iclr2026/figures/fit/fit_base_holdout_N_C_ErrRate.pdf}
+    \caption{Compute (Flops, log) — error rate}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.9\linewidth]{iclr2026/figures/fit/fit_base_holdout_N_E_ErrRate.pdf}
+    \caption{Data size (log) — error rate}
+  \end{subfigure}
+
+  \vspace{-0.25em}
+  \caption{Fitted curves on holdout validation (Base model).}
+  \label{fig:fit_base_holdout_N_E_C_R_ErrRate}
+\end{figure*}
+
+
+
+This finding indicates that while the initial state affects the \textit{absolute performance}---effectively shifting the intercept of the scaling curve---it does not alter the underlying \textit{scaling dynamics}. The rate of improvement, governed by the scaling exponent, remains consistent. This confirms that our scaling law is robust to the initial capabilities of the model.
+
+    \subsection{Qwen or Llama model}
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!30!white, title=Observation 1]
+Our results show similar qualitative conclusions for different pre-trained models (llama or qwen)
+\end{tcolorbox}
+    
+    \subsection{GRPO rollout number}
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!30!white, title=Observation 1]
+The impact of rollout number in grop is
+\end{tcolorbox}

@@ -1,0 +1,42 @@
+\section{Proof}
+
+
+-------- xhyu
+% \[
+% \begin{aligned}
+% TestLoss = L(N,D)
+% &= \left(\frac{N_c}{N}\right)^{\alpha_N}
+% + \alpha_D \left(\frac{N_c}{N}\right)^{\alpha_N-\frac{\alpha_N}{\alpha_D}} \frac{D_c}{D}
+% + \frac{\alpha_D(\alpha_D-1)}{2}\left(\frac{N_c}{N}\right)^{\alpha_N-\frac{2\alpha_N}{\alpha_D}}
+% \left(\frac{D_c}{D}\right)^2
+% + \mathcal{O}\!\left(\frac{1}{D^3}\right).
+% \end{aligned}
+% \]
+
+\begin{equation}
+TestLoss \approx \left(\frac{N_c}{N}\right)^{\alpha_N}
++ \alpha_D \left(\frac{N_c}{N}\right)^{\alpha_N-\frac{\alpha_N}{\alpha_D}} \frac{D_c}{D}
+\end{equation}
+
+\begin{equation}
+    -logR - \left(\frac{N_c}{N}\right)^{\alpha_N} = \alpha_D \left(\frac{N_c}{N}\right)^{\alpha_N-\frac{\alpha_N}{\alpha_D}} \frac{D_c}{D}
+\end{equation}
+
+
+\begin{equation}
+    -log(R/R_0) = \alpha_D \left(\frac{N_c}{N}\right)^{\alpha_N-\frac{\alpha_N}{\alpha_D}} \frac{D_c}{D+D_0}
+\end{equation}
+
+
+\begin{equation}
+    -log(R/R_0) = \left(\frac{N}{N_c}\right)^{\alpha_N} \frac{D_c}{D+D_0}
+\end{equation}
+
+\begin{equation}
+    R = e^{-\alpha_D \left(\frac{N_c}{N}\right)^{\alpha_N-\frac{\alpha_N}{\alpha_D}} \frac{D_c}{D}}
+\end{equation}
+
+
+\begin{equation}
+    R = e^{-\alpha_D \left(\frac{N_c}{N}\right)^{\beta} \frac{D_c}{D}}
+\end{equation}

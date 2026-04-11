@@ -1,0 +1,383 @@
+\relax 
+\bibstyle{acl_natbib}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{kaplan2020scaling,hoffmann2022training}
+\citation{li2025misfitting}
+\citation{kaplan2020scaling}
+\citation{hoffmann2022training}
+\citation{hilton2023scaling}
+\citation{ferrag2025llm,guo2025deepseekr1,kimi2025scaling,ahn2024large}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:introduction}{{1}{1}{Introduction}{section.1}{}}
+\newlabel{sec:introduction@cref}{{[section][1][]1}{[1][1][]1}{}{}{}}
+\citation{qwen2025qwen25technicalreport}
+\newlabel{fig:loss_vs_compute_exp_a}{{1a}{2}{\tzl {Inter-model Prediction for Base Model}}{figure.caption.1}{}}
+\newlabel{fig:loss_vs_compute_exp_a@cref}{{[subfigure][1][1]1a}{[1][1][]2}{}{}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_a}{{a}{2}{\tzl {Inter-model Prediction for Base Model}}{figure.caption.1}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_a@cref}{{[subfigure][1][1]1a}{[1][1][]2}{}{}{}}
+\newlabel{fig:loss_vs_compute_exp_b}{{1b}{2}{\tzl {Inter-model Prediction for Instruct Model}}{figure.caption.1}{}}
+\newlabel{fig:loss_vs_compute_exp_b@cref}{{[subfigure][2][1]1b}{[1][1][]2}{}{}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_b}{{b}{2}{\tzl {Inter-model Prediction for Instruct Model}}{figure.caption.1}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_b@cref}{{[subfigure][2][1]1b}{[1][1][]2}{}{}{}}
+\newlabel{fig:loss_vs_compute_exp_c}{{1c}{2}{\tzl {Intra-model Prediction for Base Model}}{figure.caption.2}{}}
+\newlabel{fig:loss_vs_compute_exp_c@cref}{{[subfigure][3][1]1c}{[1][1][]2}{}{}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_c}{{c}{2}{\tzl {Intra-model Prediction for Base Model}}{figure.caption.2}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_c@cref}{{[subfigure][3][1]1c}{[1][1][]2}{}{}{}}
+\newlabel{fig:loss_vs_compute_exp_d}{{1d}{2}{\tzl {Intra-model Prediction for Instruct Model}}{figure.caption.2}{}}
+\newlabel{fig:loss_vs_compute_exp_d@cref}{{[subfigure][4][1]1d}{[1][1][]2}{}{}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_d}{{d}{2}{\tzl {Intra-model Prediction for Instruct Model}}{figure.caption.2}{}}
+\newlabel{sub@fig:loss_vs_compute_exp_d@cref}{{[subfigure][4][1]1d}{[1][1][]2}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Empirical Scaling Behaviors in RL Post-training.} We validate the proposed power-law (Eq.~\ref {eq:scaling_law_intro}), which characterizes the relationship between model performance and post-training resource consumption, across models ranging from 0.5B to 72B parameters. \textbf  {(a, b) Inter-model Prediction:} Scaling coefficients fitted on smaller models (0.5B--32B) accurately predict the learning efficiency of the held-out 72B model (dashed lines) . \textbf  {(c, d) Intra-model Prediction:} The final convergence on the full dataset is extrapolated solely from early training dynamics.}}{2}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:intro_scaling_prediction}{{1}{2}{\textbf {Empirical Scaling Behaviors in RL Post-training.} We validate the proposed power-law (Eq.~\ref {eq:scaling_law_intro}), which characterizes the relationship between model performance and post-training resource consumption, across models ranging from 0.5B to 72B parameters. \textbf {(a, b) Inter-model Prediction:} Scaling coefficients fitted on smaller models (0.5B--32B) accurately predict the learning efficiency of the held-out 72B model (dashed lines) . \textbf {(c, d) Intra-model Prediction:} The final convergence on the full dataset is extrapolated solely from early training dynamics}{figure.caption.2}{}}
+\newlabel{fig:intro_scaling_prediction@cref}{{[figure][1][]1}{[1][1][]2}{}{}{}}
+\newlabel{fig:loss_vs_compute_exp}{{1}{2}{\textbf {Empirical Scaling Behaviors in RL Post-training.} We validate the proposed power-law (Eq.~\ref {eq:scaling_law_intro}), which characterizes the relationship between model performance and post-training resource consumption, across models ranging from 0.5B to 72B parameters. \textbf {(a, b) Inter-model Prediction:} Scaling coefficients fitted on smaller models (0.5B--32B) accurately predict the learning efficiency of the held-out 72B model (dashed lines) . \textbf {(c, d) Intra-model Prediction:} The final convergence on the full dataset is extrapolated solely from early training dynamics}{figure.caption.2}{}}
+\newlabel{fig:loss_vs_compute_exp@cref}{{[figure][1][]1}{[1][1][]2}{}{}{}}
+\newlabel{eq:scaling_law_intro}{{1}{2}{Introduction}{equation.1}{}}
+\newlabel{eq:scaling_law_intro@cref}{{[equation][1][]1}{[1][2][]2}{}{}{}}
+\newlabel{eq:efficiency_intro}{{2}{2}{Introduction}{equation.2}{}}
+\newlabel{eq:efficiency_intro@cref}{{[equation][2][]2}{[1][2][]2}{}{}{}}
+\citation{shao2024deepseekmathpushinglimitsmathematical}
+\citation{qwen2025qwen25technicalreport}
+\citation{sheng2024hybridflow}
+\citation{cheng2025revisiting}
+\citation{patel2024aimeaioptimizationmultiple}
+\citation{knoveleng_amc23_dataset}
+\citation{cobbe2021trainingverifierssolvemath}
+\citation{lightman2023letsverifystepstep}
+\citation{chen2021evaluatinglargelanguagemodels}
+\citation{Lin_ZeroEval_A_Unified_2024}
+\citation{pteam2025supergpqascalingllmevaluation}
+\citation{wei2023chainofthoughtpromptingelicitsreasoning}
+\citation{shao2024deepseekmathpushinglimitsmathematical}
+\citation{kaplan2020scaling}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Experimental Setup}{3}{section.2}\protected@file@percent }
+\newlabel{sec:experimental_setup}{{2}{3}{Experimental Setup}{section.2}{}}
+\newlabel{sec:experimental_setup@cref}{{[section][2][]2}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Models and Framework.}{3}{section*.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Dataset settings.}{3}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Prompt Setting.}{3}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RL Algorithm.}{3}{section*.6}\protected@file@percent }
+\newlabel{eq:GRPO}{{3}{3}{RL Algorithm}{equation.3}{}}
+\newlabel{eq:GRPO@cref}{{[equation][3][]3}{[1][3][]3}{}{}{}}
+\newlabel{eq:GRPO-Adv}{{4}{3}{RL Algorithm}{equation.4}{}}
+\newlabel{eq:GRPO-Adv@cref}{{[equation][4][]4}{[1][3][]3}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Reward Signal and Evaluation Metric.}{3}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Fitting and Prediction Protocols.}{4}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Empirical Results and Scaling Laws}{4}{section.3}\protected@file@percent }
+\newlabel{sec:experimental_analysis}{{3}{4}{Empirical Results and Scaling Laws}{section.3}{}}
+\newlabel{sec:experimental_analysis@cref}{{[section][3][]3}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Compute-Optimal Scaling}{4}{subsection.3.1}\protected@file@percent }
+\newlabel{subsec:compute_scaling}{{3.1}{4}{Compute-Optimal Scaling}{subsection.3.1}{}}
+\newlabel{subsec:compute_scaling@cref}{{[subsection][1][3]3.1}{[1][4][]4}{}{}{}}
+\newlabel{eq:compute-constrained}{{5}{4}{Compute-Optimal Scaling}{equation.5}{}}
+\newlabel{eq:compute-constrained@cref}{{[equation][5][]5}{[1][4][]4}{}{}{}}
+\newlabel{eq:compute_law}{{6}{4}{Compute-Optimal Scaling}{equation.6}{}}
+\newlabel{eq:compute_law@cref}{{[equation][6][]6}{[1][4][]4}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Data-Optimal Scaling}{4}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec:data_scaling}{{3.2}{4}{Data-Optimal Scaling}{subsection.3.2}{}}
+\newlabel{subsec:data_scaling@cref}{{[subsection][2][3]3.2}{[1][4][]4}{}{}{}}
+\newlabel{fig:inter_base}{{2a}{5}{\tzl {Inter-model Prediction for Base Model}}{figure.caption.9}{}}
+\newlabel{fig:inter_base@cref}{{[subfigure][1][2]2a}{[1][5][]5}{}{}{}}
+\newlabel{sub@fig:inter_base}{{a}{5}{\tzl {Inter-model Prediction for Base Model}}{figure.caption.9}{}}
+\newlabel{sub@fig:inter_base@cref}{{[subfigure][1][2]2a}{[1][5][]5}{}{}{}}
+\newlabel{fig:inter_instruct}{{2b}{5}{\tzl {Inter-model Prediction for Instruct Model}}{figure.caption.9}{}}
+\newlabel{fig:inter_instruct@cref}{{[subfigure][2][2]2b}{[1][5][]5}{}{}{}}
+\newlabel{sub@fig:inter_instruct}{{b}{5}{\tzl {Inter-model Prediction for Instruct Model}}{figure.caption.9}{}}
+\newlabel{sub@fig:inter_instruct@cref}{{[subfigure][2][2]2b}{[1][5][]5}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \textbf  {Inter-model Prediction in data scenario.} The scaling law parameters are fitted on smaller models (0.5B--32B) to \textbf  {predict} the learning efficiency of the largest model (72B, represented by dashed lines). The accurate alignment validates that the superior sample efficiency of larger models follows a predictable trajectory, confirming that performance gains scale consistently up to 72B.}}{5}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:loss_vs_data_inter}{{2}{5}{\textbf {Inter-model Prediction in data scenario.} The scaling law parameters are fitted on smaller models (0.5B--32B) to \textbf {predict} the learning efficiency of the largest model (72B, represented by dashed lines). The accurate alignment validates that the superior sample efficiency of larger models follows a predictable trajectory, confirming that performance gains scale consistently up to 72B}{figure.caption.9}{}}
+\newlabel{fig:loss_vs_data_inter@cref}{{[figure][2][]2}{[1][5][]5}{}{}{}}
+\newlabel{eq:data-constraint}{{7}{5}{Data-Optimal Scaling}{equation.7}{}}
+\newlabel{eq:data-constraint@cref}{{[equation][7][]7}{[1][5][]5}{}{}{}}
+\newlabel{eq:data_law}{{8}{5}{Data-Optimal Scaling}{equation.8}{}}
+\newlabel{eq:data_law@cref}{{[equation][8][]8}{[1][5][]5}{}{}{}}
+\newlabel{fig:intra_base}{{3a}{5}{\tzl {Intra-model Prediction for Base Model}}{figure.caption.10}{}}
+\newlabel{fig:intra_base@cref}{{[subfigure][1][3]3a}{[1][5][]5}{}{}{}}
+\newlabel{sub@fig:intra_base}{{a}{5}{\tzl {Intra-model Prediction for Base Model}}{figure.caption.10}{}}
+\newlabel{sub@fig:intra_base@cref}{{[subfigure][1][3]3a}{[1][5][]5}{}{}{}}
+\newlabel{fig:intra_instruct}{{3b}{5}{\tzl {Intra-model Prediction for Instruct Model}}{figure.caption.10}{}}
+\newlabel{fig:intra_instruct@cref}{{[subfigure][2][3]3b}{[1][5][]5}{}{}{}}
+\newlabel{sub@fig:intra_instruct}{{b}{5}{\tzl {Intra-model Prediction for Instruct Model}}{figure.caption.10}{}}
+\newlabel{sub@fig:intra_instruct@cref}{{[subfigure][2][3]3b}{[1][5][]5}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \textbf  {Intra-model Prediction in data scenario.} The loss trajectory is fitted using initial training data steps to \textbf  {predict} the subsequent performance trends on the full dataset. The results demonstrate that RL post-training maintains a nearly constant learning efficiency (manifesting as a linear trend in log-scale) during the rapid performance ascent, allowing the overall training trajectory to be accurately extrapolated from early dynamics.}}{5}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:loss_vs_data_intra}{{3}{5}{\textbf {Intra-model Prediction in data scenario.} The loss trajectory is fitted using initial training data steps to \textbf {predict} the subsequent performance trends on the full dataset. The results demonstrate that RL post-training maintains a nearly constant learning efficiency (manifesting as a linear trend in log-scale) during the rapid performance ascent, allowing the overall training trajectory to be accurately extrapolated from early dynamics}{figure.caption.10}{}}
+\newlabel{fig:loss_vs_data_intra@cref}{{[figure][3][]3}{[1][5][]5}{}{}{}}
+\newlabel{fig:coef_k_c}{{4a}{6}{Fitted learning efficiency $k_C(N)$}{figure.caption.11}{}}
+\newlabel{fig:coef_k_c@cref}{{[subfigure][1][4]4a}{[1][5][]6}{}{}{}}
+\newlabel{sub@fig:coef_k_c}{{a}{6}{Fitted learning efficiency $k_C(N)$}{figure.caption.11}{}}
+\newlabel{sub@fig:coef_k_c@cref}{{[subfigure][1][4]4a}{[1][5][]6}{}{}{}}
+\newlabel{fig:coef_k_d}{{4b}{6}{Fitted learning efficiency $k_D(N)$}{figure.caption.11}{}}
+\newlabel{fig:coef_k_d@cref}{{[subfigure][2][4]4b}{[1][5][]6}{}{}{}}
+\newlabel{sub@fig:coef_k_d}{{b}{6}{Fitted learning efficiency $k_D(N)$}{figure.caption.11}{}}
+\newlabel{sub@fig:coef_k_d@cref}{{[subfigure][2][4]4b}{[1][5][]6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Fitted learning efficiency coefficients for Base and Instruct models. Both $k_C(N)$ (a) and $k_D(N)$ (b) exhibit identical trends: larger models consistently show higher learning efficiency, with efficiency gains beginning to diminish after the 32B model size.}}{6}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:coef_k_combined}{{4}{6}{Fitted learning efficiency coefficients for Base and Instruct models. Both $k_C(N)$ (a) and $k_D(N)$ (b) exhibit identical trends: larger models consistently show higher learning efficiency, with efficiency gains beginning to diminish after the 32B model size}{figure.caption.11}{}}
+\newlabel{fig:coef_k_combined@cref}{{[figure][4][]4}{[1][5][]6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Cross-Architecture Generalization}{6}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec:cross_arch}{{3.3}{6}{Cross-Architecture Generalization}{subsection.3.3}{}}
+\newlabel{subsec:cross_arch@cref}{{[subsection][3][3]3.3}{[1][6][]6}{}{}{}}
+\newlabel{fig:llama_scaling_c}{{5a}{6}{Fitted $L(N, C)$ on Llama Instruct}{figure.caption.12}{}}
+\newlabel{fig:llama_scaling_c@cref}{{[subfigure][1][5]5a}{[1][6][]6}{}{}{}}
+\newlabel{sub@fig:llama_scaling_c}{{a}{6}{Fitted $L(N, C)$ on Llama Instruct}{figure.caption.12}{}}
+\newlabel{sub@fig:llama_scaling_c@cref}{{[subfigure][1][5]5a}{[1][6][]6}{}{}{}}
+\newlabel{fig:llama_scaling_d}{{5b}{6}{Fitted $L(N, D)$ on Llama Instruct}{figure.caption.12}{}}
+\newlabel{fig:llama_scaling_d@cref}{{[subfigure][2][5]5b}{[1][6][]6}{}{}{}}
+\newlabel{sub@fig:llama_scaling_d}{{b}{6}{Fitted $L(N, D)$ on Llama Instruct}{figure.caption.12}{}}
+\newlabel{sub@fig:llama_scaling_d@cref}{{[subfigure][2][5]5b}{[1][6][]6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textbf  {Cross-architecture validation on Llama~3.} The same scaling law (Eq.~\ref {eq:compute_law},~\ref {eq:data_law}) fitted on Llama~3 Instruct models (1B--70B) achieves $R^2 > 0.99$ for both compute (a) and data (b) dimensions.}}{6}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:llama_scaling}{{5}{6}{\textbf {Cross-architecture validation on Llama~3.} The same scaling law (Eq.~\ref {eq:compute_law},~\ref {eq:data_law}) fitted on Llama~3 Instruct models (1B--70B) achieves $R^2 > 0.99$ for both compute (a) and data (b) dimensions}{figure.caption.12}{}}
+\newlabel{fig:llama_scaling@cref}{{[figure][5][]5}{[1][6][]6}{}{}{}}
+\citation{kaplan2020scaling}
+\citation{hoffmann2022training}
+\citation{pearce2024reconciling,porian2024resolving}
+\citation{sorscher2022beyond}
+\citation{hernandez2022scaling}
+\citation{pandey2024gzip}
+\citation{muennighoff2023scaling,qin2025scaling}
+\citation{isik2024scaling}
+\citation{snell2024scaling}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Scaling with Constrained Data and Reuse}{7}{subsection.3.4}\protected@file@percent }
+\newlabel{eq:data-reuse}{{9}{7}{Scaling with Constrained Data and Reuse}{equation.9}{}}
+\newlabel{eq:data-reuse@cref}{{[equation][9][]9}{[1][7][]7}{}{}{}}
+\newlabel{subsec:data_reuse}{{3.4}{7}{Scaling with Constrained Data and Reuse}{equation.9}{}}
+\newlabel{subsec:data_reuse@cref}{{[subsection][4][3]3.4}{[1][7][]7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance in data-constrained settings is primarily determined by the total number of used data ($D_{\text  {total}}$). For a fixed $D_{\text  {total}}$, the final test loss is insensitive to the data reuse factor ($\tau $), with no significant degradation up to $\tau =25$.}}{7}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:data_reuse_ablation}{{6}{7}{Performance in data-constrained settings is primarily determined by the total number of used data ($D_{\text {total}}$). For a fixed $D_{\text {total}}$, the final test loss is insensitive to the data reuse factor ($\tau $), with no significant degradation up to $\tau =25$}{figure.caption.13}{}}
+\newlabel{fig:data_reuse_ablation@cref}{{[figure][6][]6}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Domain Transfer}{7}{subsection.3.5}\protected@file@percent }
+\newlabel{subsec:domain-transfer}{{3.5}{7}{Domain Transfer}{subsection.3.5}{}}
+\newlabel{subsec:domain-transfer@cref}{{[subsection][5][3]3.5}{[1][7][]7}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Related Work}{7}{section.4}\protected@file@percent }
+\citation{hilton2023scaling}
+\citation{guo2025deepseekr1,kimi2025scaling,mai2025agent,zhang2025landscapeagenticreinforcementlearning,zhang2025surveyreinforcementlearninglarge}
+\citation{liu2025prorl}
+\citation{wang2025reinforcement}
+\citation{li2025limr}
+\citation{zeng2025simplerlzoo,yue2025doesrlincentivize}
+\citation{li2025onedomainhelps,cheng2025revisiting}
+\citation{nie2026attnpo}
+\citation{fan2025ssrl}
+\citation{yuan2025understandingllmreasoningabstractive}
+\citation{touvron2023scaling}
+\citation{ye2024skywork}
+\citation{yue2023mammoth}
+\citation{zeng2025agent}
+\citation{10.5555/3312046}
+\citation{silver2017masteringchessshogiselfplay}
+\citation{jumper2021highly}
+\citation{huang2025gemini25procapable}
+\citation{hilton2023scaling}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \textcolor {black}{RL post-training on mathematical reasoning yields generalization improvements on in-domain tasks with varying difficulty, but shows negligible transfer to out-of-domain tasks.}}}{8}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:domain_transfer}{{7}{8}{\tzl {RL post-training on mathematical reasoning yields generalization improvements on in-domain tasks with varying difficulty, but shows negligible transfer to out-of-domain tasks.}}{figure.caption.14}{}}
+\newlabel{fig:domain_transfer@cref}{{[figure][7][]7}{[1][7][]8}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{8}{section.5}\protected@file@percent }
+\citation{cui2025entropymechanismreinforcementlearning}
+\citation{zhang2025landscapeagenticreinforcementlearning,zhang2025surveyreinforcementlearninglarge}
+\citation{lin2025understandingtoolintegratedreasoning,houliston2025provablebenefitsintoollearning,mai2025agentrlscalinglaw}
+\citation{zhou2025reso}
+\citation{xue2026comascoevolvingmultiagentsystems}
+\bibdata{custom}
+\bibcite{ahn2024large}{{1}{2024}{{Ahn et~al.}}{{Ahn, Verma, Lou, Liu, Zhang, and Yin}}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}\protected@file@percent }
+\bibcite{chen2021evaluatinglargelanguagemodels}{{2}{2021}{{Chen et~al.}}{{Chen, Tworek, Jun, Yuan, de~Oliveira~Pinto, Kaplan, Edwards, Burda, Joseph, Brockman, Ray, Puri, Krueger, Petrov, Khlaaf, Sastry, Mishkin, Chan, Gray, Ryder, Pavlov, Power, Kaiser, Bavarian, Winter, Tillet, Such, Cummings, Plappert, Chantzis, Barnes, Herbert-Voss, Guss, Nichol, Paino, Tezak, Tang, Babuschkin, Balaji, Jain, Saunders, Hesse, Carr, Leike, Achiam, Misra, Morikawa, Radford, Knight, Brundage, Murati, Mayer, Welinder, McGrew, Amodei, McCandlish, Sutskever, and Zaremba}}}
+\bibcite{cheng2025revisiting}{{3}{2025}{{Cheng et~al.}}{{Cheng, Hao, Liu, Zhou, Xie, Yao, Bian, Zhuang, Dey, Zha, Gu, Zhou, Wang, Li, Fan, She, Gao, Saparov, Li, Killian, Yurochkin, Liu, Xing, and Hu}}}
+\bibcite{cobbe2021trainingverifierssolvemath}{{4}{2021}{{Cobbe et~al.}}{{Cobbe, Kosaraju, Bavarian, Chen, Jun, Kaiser, Plappert, Tworek, Hilton, Nakano, Hesse, and Schulman}}}
+\bibcite{cui2025entropymechanismreinforcementlearning}{{5}{2025}{{Cui et~al.}}{{Cui, Zhang, Chen, Yuan, Wang, Zuo, Li, Fan, Chen, Chen, Liu, Peng, Bai, Ouyang, Cheng, Zhou, and Ding}}}
+\bibcite{guo2025deepseekr1}{{6}{2025}{{DeepSeek-AI}}{{}}}
+\bibcite{fan2025ssrl}{{7}{2025}{{Fan* et~al.}}{{Fan*, Zhang*, Zhou*, Zuo, Chen, Fu, Zhu, Jiang, Zhang, Kang, Chen, Huang, He, Wang, Bai, Ding, and Zhou}}}
+\bibcite{ferrag2025llm}{{8}{2025}{{Ferrag et~al.}}{{Ferrag, Tihanyi, and Debbah}}}
+\bibcite{hernandez2022scaling}{{9}{2022}{{Hernandez et~al.}}{{Hernandez, Brown, Conerly, DasSarma, Drain, El-Showk, Elhage, Hatfield-Dodds, Henighan, Hume et~al.}}}
+\bibcite{hilton2023scaling}{{10}{2023}{{Hilton et~al.}}{{Hilton, Tang, and Schulman}}}
+\bibcite{hoffmann2022training}{{11}{2022}{{Hoffmann et~al.}}{{Hoffmann, Borgeaud, Mensch, Buchatskaya, Cai, Rutherford, de~Las~Casas, Hendricks, Welbl, Clark, Hennigan, Noland, Millican, van~den Driessche, Damoc, Guy, Osindero, Simonyan, Elsen, Vinyals, Rae, and Sifre}}}
+\bibcite{houliston2025provablebenefitsintoollearning}{{12}{2025}{{Houliston et~al.}}{{Houliston, Odonnat, Arnal, and Cabannes}}}
+\bibcite{huang2025gemini25procapable}{{13}{2025}{{Huang and Yang}}{{}}}
+\bibcite{isik2024scaling}{{14}{2024}{{Isik et~al.}}{{Isik, Ponomareva, Hazimeh, Paparas, Vassilvitskii, and Koyejo}}}
+\bibcite{jumper2021highly}{{15}{2021}{{Jumper et~al.}}{{Jumper, Evans, Pritzel, Green, Figurnov, Ronneberger, Tunyasuvunakool, Bates, {\v {Z}}{\'\i }dek, Potapenko et~al.}}}
+\bibcite{kaplan2020scaling}{{16}{2020}{{Kaplan et~al.}}{{Kaplan, McCandlish, Henighan, Brown, Chess, Child, Gray, Radford, Wu, and Amodei}}}
+\bibcite{kimi2025scaling}{{17}{2025}{{Kimi Team}}{{}}}
+\bibcite{knoveleng_amc23_dataset}{{18}{2025}{{KnovelEng}}{{}}}
+\bibcite{li2025misfitting}{{19}{2025{a}}{{Li et~al.}}{{Li, Kudugunta, and Zettlemoyer}}}
+\bibcite{li2025limr}{{20}{2025{b}}{{Li et~al.}}{{Li, Zou, and Liu}}}
+\bibcite{li2025onedomainhelps}{{21}{2025{c}}{{Li et~al.}}{{Li, Pan, Lin, Sun, He, and Wu}}}
+\bibcite{lightman2023letsverifystepstep}{{22}{2023}{{Lightman et~al.}}{{Lightman, Kosaraju, Burda, Edwards, Baker, Lee, Leike, Schulman, Sutskever, and Cobbe}}}
+\bibcite{Lin_ZeroEval_A_Unified_2024}{{23}{2024}{{Lin}}{{}}}
+\bibcite{lin2025understandingtoolintegratedreasoning}{{24}{2025}{{Lin and Xu}}{{}}}
+\bibcite{liu2025prorl}{{25}{2025}{{Liu et~al.}}{{Liu, Diao, Lu, Hu, Dong, Choi, Kautz, and Dong}}}
+\bibcite{mai2025agentrlscalinglaw}{{26}{2025{a}}{{Mai et~al.}}{{Mai, Xu, Li, W, Wang, Hu, Zhang, and Zhang}}}
+\bibcite{mai2025agent}{{27}{2025{b}}{{Mai et~al.}}{{Mai, Xu, Wang, Hu, Zhang, Zhang et~al.}}}
+\bibcite{muennighoff2023scaling}{{28}{2023}{{Muennighoff et~al.}}{{Muennighoff, Rush, Barak, Le~Scao, Tazi, Piktus, Pyysalo, Wolf, and Raffel}}}
+\bibcite{nie2026attnpo}{{29}{2026}{{Nie et~al.}}{{Nie, Ding, Zhang, Yu, Yang, Chen, Liu, Yin, Sun, and Wu}}}
+\bibcite{openai2025gptoss120bgptoss20bmodel}{{30}{2025}{{OpenAI et~al.}}{{OpenAI, :, Agarwal, Ahmad, Ai, Altman, Applebaum, Arbus, Arora, Bai, Baker, Bao, Barak, Bennett, Bertao, Brett, Brevdo, Brockman, Bubeck, Chang, Chen, Chen, Cheung, Clark, Cook, Dukhan, Dvorak, Fives, Fomenko, Garipov, Georgiev, Glaese, Gogineni, Goucher, Gross, Guzman, Hallman, Hehir, Heidecke, Helyar, Hu, Huet, Huh, Jain, Johnson, Koch, Kofman, Kundel, Kwon, Kyrylov, Le, Leclerc, Lennon, Lessans, Lezcano-Casado, Li, Li, Lin, Liss, Lily, Liu, Liu, Lu, Lu, Martinovic, McCallum, McGrath, McKinney, McLaughlin, Mei, Mostovoy, Mu, Myles, Neitz, Nichol, Pachocki, Paino, Palmie, Pantuliano, Parascandolo, Park, Pathak, Paz, Peran, Pimenov, Pokrass, Proehl, Qiu, Raila, Raso, Ren, Richardson, Robinson, Rotsted, Salman, Sanjeev, Schwarzer, Sculley, Sikchi, Simon, Singhal, Song, Stuckey, Sun, Tillet, Toizer, Tsimpourlas, Vyas, Wallace, Wang, Wang, Watkins, Weil, Wendling, Whinnery, Whitney, Wong, Yang, Yang, Yasunaga, Ying, Zaremba, Zhan, Zhang, Zhang, Zhang, and Zhao}}}
+\bibcite{pandey2024gzip}{{31}{2024}{{Pandey}}{{}}}
+\bibcite{patel2024aimeaioptimizationmultiple}{{32}{2024}{{Patel et~al.}}{{Patel, Chakraborty, Suttle, Wang, Bedi, and Manocha}}}
+\bibcite{pearce2024reconciling}{{33}{2024}{{Pearce and Song}}{{}}}
+\bibcite{porian2024resolving}{{34}{2024}{{Porian et~al.}}{{Porian, Wortsman, Jitsev, Schmidt, and Carmon}}}
+\bibcite{qin2025scaling}{{35}{2025}{{Qin et~al.}}{{Qin, Dong, Zhang, Dong, Huang, Yang, Khademi, Zhang, Awadalla, Fung et~al.}}}
+\bibcite{qwen2025qwen25technicalreport}{{36}{2025}{{Qwen et~al.}}{{Qwen, :, Yang, Yang, Zhang, Hui, Zheng, Yu, Li, Liu, Huang, Wei, Lin, Yang, Tu, Zhang, Yang, Yang, Zhou, Lin, Dang, Lu, Bao, Yang, Yu, Li, Xue, Zhang, Zhu, Men, Lin, Li, Tang, Xia, Ren, Ren, Fan, Su, Zhang, Wan, Liu, Cui, Zhang, and Qiu}}}
+\bibcite{shao2024deepseekmathpushinglimitsmathematical}{{37}{2024}{{Shao et~al.}}{{Shao, Wang, Zhu, Xu, Song, Bi, Zhang, Zhang, Li, Wu, and Guo}}}
+\bibcite{sheng2024hybridflow}{{38}{2024}{{Sheng et~al.}}{{Sheng, Zhang, Ye, Wu, Zhang, Zhang, Peng, Lin, and Wu}}}
+\bibcite{silver2017masteringchessshogiselfplay}{{39}{2017}{{Silver et~al.}}{{Silver, Hubert, Schrittwieser, Antonoglou, Lai, Guez, Lanctot, Sifre, Kumaran, Graepel, Lillicrap, Simonyan, and Hassabis}}}
+\bibcite{snell2024scaling}{{40}{2024}{{Snell et~al.}}{{Snell, Lee, Xu, and Kumar}}}
+\bibcite{sorscher2022beyond}{{41}{2022}{{Sorscher et~al.}}{{Sorscher, Geirhos, Shekhar, Ganguli, and Morcos}}}
+\bibcite{10.5555/3312046}{{42}{2018}{{Sutton and Barto}}{{}}}
+\bibcite{pteam2025supergpqascalingllmevaluation}{{43}{2025}{{Team et~al.}}{{Team, Du, Yao, Ma, Wang, Zheng, Zhu, Liu, Liang, Jin, Wei, Zheng, Deng, Gavin, Jia, Jiang, Liao, Li, Li, Li, Li, Li, Ma, Ni, Que, Wang, Wen, Wu, Hsing, Xu, Yang, Wang, Zhou, Bai, Bu, Cai, Chen, Chen, Cheng, Cheng, Ding, Huang, Huang, Li, Li, Li, Liang, Lin, Lin, Ma, Pang, Peng, Peng, Qi, Qiu, Qu, Quan, Tan, Wang, Wang, Wang, Wang, Wang, Xu, Yang, Yuan, Yue, Zhan, Zhang, Zhang, Zhang, Zhang, Zhang, Zhao, Zheng, Zhong, Gao, Li, Liu, Liu, Liu, Ni, Peng, Qin, Su, Wang, Wang, Yang, Yang, Cao, Yue, Zhang, Zhou, Liu, Lin, Huang, and Zhang}}}
+\bibcite{touvron2023scaling}{{44}{2023}{{Touvron et~al.}}{{Touvron, Jiang, Du, and et~al.}}}
+\bibcite{wang2025reinforcement}{{45}{2025}{{Wang et~al.}}{{Wang, Yang, Zeng, Ren, Liu, Peng, Cheng, He, Wang, Gao et~al.}}}
+\bibcite{wei2023chainofthoughtpromptingelicitsreasoning}{{46}{2023}{{Wei et~al.}}{{Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, and Zhou}}}
+\bibcite{xue2026comascoevolvingmultiagentsystems}{{47}{2026}{{Xue et~al.}}{{Xue, Zhou, Zhang, Zhang, Li, Zhang, Yin, Torr, Ouyang, and Bai}}}
+\bibcite{yang2025qwen3technicalreport}{{48}{2025}{{Yang et~al.}}{{Yang, Li, Yang, Zhang, Hui, Zheng, Yu, Gao, Huang, Lv, Zheng, Liu, Zhou, Huang, Hu, Ge, Wei, Lin, Tang, Yang, Tu, Zhang, Yang, Yang, Zhou, Zhou, Lin, Dang, Bao, Yang, Yu, Deng, Li, Xue, Li, Zhang, Wang, Zhu, Men, Gao, Liu, Luo, Li, Tang, Yin, Ren, Wang, Zhang, Ren, Fan, Su, Zhang, Zhang, Wan, Liu, Wang, Cui, Zhang, Zhou, and Qiu}}}
+\bibcite{ye2024skywork}{{49}{2024}{{Ye et~al.}}{{Ye, Qian, Song, and et~al.}}}
+\bibcite{yuan2025understandingllmreasoningabstractive}{{50}{2025}{{Yuan and Zhang}}{{}}}
+\bibcite{yue2023mammoth}{{51}{2023}{{Yue et~al.}}{{Yue, Liu, Zhang, and et~al.}}}
+\bibcite{yue2025doesrlincentivize}{{52}{2025}{{Yue et~al.}}{{Yue, Chen, Lu, Zhao, Wang, Song, and Huang}}}
+\bibcite{zeng2025simplerlzoo}{{53}{2025{a}}{{Zeng et~al.}}{{Zeng, Huang, Liu, Liu, He, Ma, and He}}}
+\bibcite{zeng2025agent}{{54}{2025{b}}{{Zeng et~al.}}{{Zeng, Guo, Wang, and et~al.}}}
+\bibcite{zhang2025landscapeagenticreinforcementlearning}{{55}{2025{a}}{{Zhang et~al.}}{{Zhang, Geng, Yu, Yin, Zhang, Tan, Zhou, Li, Xue, Li, Zhou, Chen, Zhang, Fan, Wang, Huang, Liao, Wang, Yang, Ji, Littman, Wang, Yan, Torr, and Bai}}}
+\bibcite{zhang2025surveyreinforcementlearninglarge}{{56}{2025{b}}{{Zhang et~al.}}{{Zhang, Zuo, He, Sun, Liu, Jiang, Fan, Tian, Jia, Li, Fu, Lv, Zhang, Zeng, Qu, Li, Wang, Wang, Long, Liu, Xu, Ma, Zhu, Hua, Liu, Li, Chen, Qu, Li, Chen, Yuan, Gao, Li, Ma, Cui, Liu, Qi, Ding, and Zhou}}}
+\bibcite{zhou2025reso}{{57}{2025}{{Zhou* et~al.}}{{Zhou*, Geng*, Xue, Kang, Qin, Wang, Yin, and Bai}}}
+\newlabel{sec:appendix}{{6}{12}{Acknowledgments}{section*.17}{}}
+\newlabel{sec:appendix@cref}{{[section][0][]}{[1][12][]12}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Experiment Setup Details}{12}{appendix.A}\protected@file@percent }
+\newlabel{app:exp_details}{{A}{12}{Experiment Setup Details}{appendix.A}{}}
+\newlabel{app:exp_details@cref}{{[section][1][]A}{[1][12][]12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Dataset Details}{12}{subsection.A.1}\protected@file@percent }
+\newlabel{app:datasets}{{A.1}{12}{Dataset Details}{subsection.A.1}{}}
+\newlabel{app:datasets@cref}{{[subsection][1][1]A.1}{[1][12][]12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}Hyperparameter Configuration}{12}{subsection.A.2}\protected@file@percent }
+\newlabel{app:hyperparams}{{A.2}{12}{Hyperparameter Configuration}{subsection.A.2}{}}
+\newlabel{app:hyperparams@cref}{{[subsection][2][1]A.2}{[1][12][]12}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces GRPO training hyperparameters used across all experiments.}}{12}{table.caption.19}\protected@file@percent }
+\newlabel{tab:hyperparams_appendix}{{2}{12}{GRPO training hyperparameters used across all experiments}{table.caption.19}{}}
+\newlabel{tab:hyperparams_appendix@cref}{{[table][2][]2}{[1][12][]12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Prompt Templates}{12}{subsection.A.3}\protected@file@percent }
+\newlabel{app:prompts}{{A.3}{12}{Prompt Templates}{subsection.A.3}{}}
+\newlabel{app:prompts@cref}{{[subsection][3][1]A.3}{[1][12][]12}{}{}{}}
+\citation{muennighoff2023scaling}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Composition of the multi-domain evaluation suite.}}{13}{table.caption.18}\protected@file@percent }
+\newlabel{tab:eval_suite_appendix}{{1}{13}{Composition of the multi-domain evaluation suite}{table.caption.18}{}}
+\newlabel{tab:eval_suite_appendix@cref}{{[table][1][]1}{[1][12][]13}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Prompt templates used for different evaluation domains.}}{13}{table.caption.20}\protected@file@percent }
+\newlabel{tab:prompt_templates}{{3}{13}{Prompt templates used for different evaluation domains}{table.caption.20}{}}
+\newlabel{tab:prompt_templates@cref}{{[table][3][]3}{[1][12][]13}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.4}Data Reuse Experiment Setup}{13}{subsection.A.4}\protected@file@percent }
+\newlabel{app:data-reuse-detailed}{{A.4}{13}{Data Reuse Experiment Setup}{subsection.A.4}{}}
+\newlabel{app:data-reuse-detailed@cref}{{[subsection][4][1]A.4}{[1][12][]13}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Data Reuse Schema}}{13}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:data_reuse_schematic}{{8}{13}{Data Reuse Schema}{figure.caption.21}{}}
+\newlabel{fig:data_reuse_schematic@cref}{{[figure][8][]8}{[1][12][]13}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Test loss on in-domain and out-of-domain benchmarks vs data size for Base models. It shows modest positive transfer on in-domain tasks, with limited or negative transfer on OOD tasks.}}{14}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:generalization_results_base}{{10}{14}{Test loss on in-domain and out-of-domain benchmarks vs data size for Base models. It shows modest positive transfer on in-domain tasks, with limited or negative transfer on OOD tasks}{figure.caption.23}{}}
+\newlabel{fig:generalization_results_base@cref}{{[figure][10][]10}{[1][14][]14}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Instruct Model}}{14}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:data_reuse_instruct}{{9}{14}{Instruct Model}{figure.caption.22}{}}
+\newlabel{fig:data_reuse_instruct@cref}{{[figure][9][]9}{[1][13][]14}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Additional Experiment Results}{14}{appendix.B}\protected@file@percent }
+\newlabel{app:additional_results}{{B}{14}{Additional Experiment Results}{figure.caption.23}{}}
+\newlabel{app:additional_results@cref}{{[section][2][]B}{[1][14][]14}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Performance on In-Domain and Out-of-Domain Tasks}{14}{subsection.B.1}\protected@file@percent }
+\newlabel{app:generalization_tasks}{{B.1}{14}{Performance on In-Domain and Out-of-Domain Tasks}{subsection.B.1}{}}
+\newlabel{app:generalization_tasks@cref}{{[subsection][1][2]B.1}{[1][14][]14}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Test loss on in-domain and out-of-domain benchmarks vs data size for Instruct models.}}{15}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:generalization_results_instruct}{{11}{15}{Test loss on in-domain and out-of-domain benchmarks vs data size for Instruct models}{figure.caption.24}{}}
+\newlabel{fig:generalization_results_instruct@cref}{{[figure][11][]11}{[1][14][]15}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}Ablation on GRPO Hyperparameters}{15}{subsection.B.2}\protected@file@percent }
+\newlabel{subsec:ablation_grpo}{{B.2}{15}{Ablation on GRPO Hyperparameters}{subsection.B.2}{}}
+\newlabel{subsec:ablation_grpo@cref}{{[subsection][2][2]B.2}{[1][15][]15}{}{}{}}
+\citation{qwen2025qwen25technicalreport}
+\citation{yang2025qwen3technicalreport}
+\citation{openai2025gptoss120bgptoss20bmodel}
+\newlabel{fig:grpo_ablation_a}{{12a}{16}{7B-Base: Loss vs.\ Compute}{figure.caption.25}{}}
+\newlabel{fig:grpo_ablation_a@cref}{{[subfigure][1][12]12a}{[1][15][]16}{}{}{}}
+\newlabel{sub@fig:grpo_ablation_a}{{a}{16}{7B-Base: Loss vs.\ Compute}{figure.caption.25}{}}
+\newlabel{sub@fig:grpo_ablation_a@cref}{{[subfigure][1][12]12a}{[1][15][]16}{}{}{}}
+\newlabel{fig:grpo_ablation_b}{{12b}{16}{7B-Base: Loss vs.\ Data Size}{figure.caption.25}{}}
+\newlabel{fig:grpo_ablation_b@cref}{{[subfigure][2][12]12b}{[1][15][]16}{}{}{}}
+\newlabel{sub@fig:grpo_ablation_b}{{b}{16}{7B-Base: Loss vs.\ Data Size}{figure.caption.25}{}}
+\newlabel{sub@fig:grpo_ablation_b@cref}{{[subfigure][2][12]12b}{[1][15][]16}{}{}{}}
+\newlabel{fig:grpo_ablation_c}{{12c}{16}{7B-Instruct: Loss vs.\ Compute}{figure.caption.25}{}}
+\newlabel{fig:grpo_ablation_c@cref}{{[subfigure][3][12]12c}{[1][15][]16}{}{}{}}
+\newlabel{sub@fig:grpo_ablation_c}{{c}{16}{7B-Instruct: Loss vs.\ Compute}{figure.caption.25}{}}
+\newlabel{sub@fig:grpo_ablation_c@cref}{{[subfigure][3][12]12c}{[1][15][]16}{}{}{}}
+\newlabel{fig:grpo_ablation_d}{{12d}{16}{7B-Instruct: Loss vs.\ Data Size}{figure.caption.25}{}}
+\newlabel{fig:grpo_ablation_d@cref}{{[subfigure][4][12]12d}{[1][15][]16}{}{}{}}
+\newlabel{sub@fig:grpo_ablation_d}{{d}{16}{7B-Instruct: Loss vs.\ Data Size}{figure.caption.25}{}}
+\newlabel{sub@fig:grpo_ablation_d@cref}{{[subfigure][4][12]12d}{[1][15][]16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces  Effects of GRPO rollout size on training efficiency. The top row shows the base model results, while the bottom row shows the instruct model results. }}{16}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:grpo_ablation}{{12}{16}{Effects of GRPO rollout size on training efficiency. The top row shows the base model results, while the bottom row shows the instruct model results}{figure.caption.25}{}}
+\newlabel{fig:grpo_ablation@cref}{{[figure][12][]12}{[1][15][]16}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}Peformance Compared with Advance Models}{16}{subsection.B.3}\protected@file@percent }
+\newlabel{app:sota_comparison}{{B.3}{16}{Peformance Compared with Advance Models}{subsection.B.3}{}}
+\newlabel{app:sota_comparison@cref}{{[subsection][3][2]B.3}{[1][15][]16}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Relation between test loss and model size $N$ for our trained model and SOTA models demonstrates the effectiveness of our training.}}{16}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:loss_vs_model_size}{{13}{16}{Relation between test loss and model size $N$ for our trained model and SOTA models demonstrates the effectiveness of our training}{figure.caption.26}{}}
+\newlabel{fig:loss_vs_model_size@cref}{{[figure][13][]13}{[1][15][]16}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Performance of various models on the held-out evaluation set. }}{17}{table.caption.27}\protected@file@percent }
+\newlabel{tab:sota_comparison_appendix}{{4}{17}{Performance of various models on the held-out evaluation set}{table.caption.27}{}}
+\newlabel{tab:sota_comparison_appendix@cref}{{[table][4][]4}{[1][16][]17}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Formula Fitting and Derivation}{17}{appendix.C}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.1}FLOPs Calculation Methodology}{17}{subsection.C.1}\protected@file@percent }
+\newlabel{app:flops_calculation}{{C.1}{17}{FLOPs Calculation Methodology}{subsection.C.1}{}}
+\newlabel{app:flops_calculation@cref}{{[subsection][1][3]C.1}{[1][17][]17}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.2}Coefficient Comparison}{17}{subsection.C.2}\protected@file@percent }
+\newlabel{app:coeff_comparison}{{C.2}{17}{Coefficient Comparison}{subsection.C.2}{}}
+\newlabel{app:coeff_comparison@cref}{{[subsection][2][3]C.2}{[1][17][]17}{}{}{}}
+\newlabel{eq:compute_law_app}{{12}{17}{Coefficient Comparison}{equation.12}{}}
+\newlabel{eq:compute_law_app@cref}{{[equation][12][]12}{[1][17][]17}{}{}{}}
+\newlabel{eq:data_law_app}{{13}{17}{Coefficient Comparison}{equation.13}{}}
+\newlabel{eq:data_law_app@cref}{{[equation][13][]13}{[1][17][]17}{}{}{}}
+\newlabel{eq:k_equal}{{14}{17}{Coefficient Comparison}{equation.14}{}}
+\newlabel{eq:k_equal@cref}{{[equation][14][]14}{[1][17][]17}{}{}{}}
+\newlabel{eq:E_relation}{{15}{17}{Coefficient Comparison}{equation.15}{}}
+\newlabel{eq:E_relation@cref}{{[equation][15][]15}{[1][17][]17}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.3}Hyper-parameter Fitting}{17}{subsection.C.3}\protected@file@percent }
+\newlabel{app:fitting_4_KE}{{C.3}{17}{Hyper-parameter Fitting}{subsection.C.3}{}}
+\newlabel{app:fitting_4_KE@cref}{{[subsection][3][3]C.3}{[1][17][]17}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces \textcolor {black}{Uncertainty Analysis for raw data: Qwen2.5 and Llama~3 Models (Holdout Score)}}}{18}{table.caption.28}\protected@file@percent }
+\newlabel{tab:uncertainty_comparison}{{5}{18}{\tzl {Uncertainty Analysis for raw data: Qwen2.5 and Llama~3 Models (Holdout Score)}}{table.caption.28}{}}
+\newlabel{tab:uncertainty_comparison@cref}{{[table][5][]5}{[1][17][]18}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Comparison of $K_{max}$ and $N_0$ parameters across model families, fitting scenarios, and scaling dimensions. All fits achieve $R^2 > 0.99$.}}{18}{table.caption.29}\protected@file@percent }
+\newlabel{tab:kn_parameters}{{6}{18}{Comparison of $K_{max}$ and $N_0$ parameters across model families, fitting scenarios, and scaling dimensions. All fits achieve $R^2 > 0.99$}{table.caption.29}{}}
+\newlabel{tab:kn_parameters@cref}{{[table][6][]6}{[1][17][]18}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {D}A Loss Decomposition Model for Scaling Analysis}{18}{appendix.D}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.1}Loss Decomposition Model}{18}{subsection.D.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The General Loss Decomposition.}{18}{section*.30}\protected@file@percent }
+\newlabel{eq:v3}{{16}{18}{The General Loss Decomposition}{equation.16}{}}
+\newlabel{eq:v3@cref}{{[equation][16][]16}{[1][18][]18}{}{}{}}
+\citation{kaplan2020scaling}
+\@writefile{toc}{\contentsline {paragraph}{Instantiated Model.}{19}{section*.31}\protected@file@percent }
+\newlabel{eq:v3_o2k}{{19}{19}{Instantiated Model}{equation.19}{}}
+\newlabel{eq:v3_o2k@cref}{{[equation][19][]19}{[1][19][]19}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.2}Predictability and Extrapolation}{19}{subsection.D.2}\protected@file@percent }
+\newlabel{fig:v3_pred_a}{{14a}{19}{Intra-model prediction using the early 30\% of training steps}{figure.caption.32}{}}
+\newlabel{fig:v3_pred_a@cref}{{[subfigure][1][14]14a}{[1][19][]19}{}{}{}}
+\newlabel{sub@fig:v3_pred_a}{{a}{19}{Intra-model prediction using the early 30\% of training steps}{figure.caption.32}{}}
+\newlabel{sub@fig:v3_pred_a@cref}{{[subfigure][1][14]14a}{[1][19][]19}{}{}{}}
+\newlabel{fig:v3_pred_b}{{14b}{19}{Inter-model extrapolation for 72B under fixed shared shape}{figure.caption.32}{}}
+\newlabel{fig:v3_pred_b@cref}{{[subfigure][2][14]14b}{[1][19][]19}{}{}{}}
+\newlabel{sub@fig:v3_pred_b}{{b}{19}{Inter-model extrapolation for 72B under fixed shared shape}{figure.caption.32}{}}
+\newlabel{sub@fig:v3_pred_b@cref}{{[subfigure][2][14]14b}{[1][19][]19}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Extrapolation of the loss decomposition model (Equation~equation~\ref {eq:v3_o2k}). (a) Intra-model prediction using partial learning-curve observations. (b) Inter-model extrapolation for 72B with global exponents fixed from smaller models.}}{19}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:v3_pred}{{14}{19}{Extrapolation of the loss decomposition model (Equation~\eqref {eq:v3_o2k}). (a) Intra-model prediction using partial learning-curve observations. (b) Inter-model extrapolation for 72B with global exponents fixed from smaller models}{figure.caption.32}{}}
+\newlabel{fig:v3_pred@cref}{{[figure][14][]14}{[1][19][]19}{}{}{}}
+\@writefile{toc}{\contentsline {paragraph}{Intra-model prediction.}{19}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Inter-model extrapolation.}{19}{section*.34}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Fitting details for $L(N,D)$ using only 30\% of the training steps for each model.}}{20}{table.caption.35}\protected@file@percent }
+\newlabel{tab:fit_v3_intra}{{7}{20}{Fitting details for $L(N,D)$ using only 30\% of the training steps for each model}{table.caption.35}{}}
+\newlabel{tab:fit_v3_intra@cref}{{[table][7][]7}{[1][20][]20}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.3}Discussion: Effective log--log slope}{20}{subsection.D.3}\protected@file@percent }
+\newlabel{eq:v3_kn}{{20}{20}{Discussion: Effective log--log slope}{equation.20}{}}
+\newlabel{eq:v3_kn@cref}{{[equation][20][]20}{[1][20][]20}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.4}Conclusion}{20}{subsection.D.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {E}Response Length}{20}{appendix.E}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \textcolor {black}{Response length vs.\ Data size (Base models).}}}{20}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:limiting_plots_base}{{15}{20}{\tzl {Response length vs.\ Data size (Base models).}}{figure.caption.36}{}}
+\newlabel{fig:limiting_plots_base@cref}{{[figure][15][]15}{[1][20][]20}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces \textcolor {black}{Response length vs.\ Data size (Instruct models).}}}{21}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:limiting_plots_instruct}{{16}{21}{\tzl {Response length vs.\ Data size (Instruct models).}}{figure.caption.37}{}}
+\newlabel{fig:limiting_plots_instruct@cref}{{[figure][16][]16}{[1][20][]21}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Ethics Statement}{21}{appendix.F}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {G}The Use of Large Language Models}{21}{appendix.G}\protected@file@percent }
+\gdef \@abspage@last{21}

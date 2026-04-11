@@ -1,0 +1,19 @@
+\subsection{The scaling law for constrained data by Data Reusing}
+% 这一节跟上一节最大的不同点在于，我们按照难度分布对代码进行了切分，切分幅度是2，5，10，25，50，100，子数据集在训练时候的epoch就是切分幅度，保持总数据量不变，然后可以讲power law中的E扩展开来成为E=unique data * epoch * k,k是系数。观察不同切分形式下训练完成之后（刚刚提到了训练的总步数是不变的）
+Having established the scaling law under data-sufficient conditions, we now turn to the more practical scenario of a data-constrained regime. In many real-world applications, the volume of high-quality, unique data is limited. This motivates an investigation into the efficacy of data reuse strategies, specifically, training a model for multiple epochs on a smaller, fixed dataset. The central question is whether repeated exposure to a limited dataset can yield comparable performance to training on a larger, unique dataset, given a fixed total number of optimization steps. For these experiments, we used the 7B parameter model as a representative case.
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!30!white, title=Observation 1]
+When the amount of data is limited, reusing data is an effective strategy, and it works well when the repetition rate is less than x.
+\end{tcolorbox}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.7\linewidth]{iclr2026/figures/holdout/holdout_slice_factor_E_ErrRate_[2, 4, 5, 20, 25, 100].pdf}
+    \caption{Data size — Error Rate on different data duplication strategy (Data repeat N times)}
+    \label{fig:datadup}
+\end{figure}
+    
+To study the effect of data reuse, we partitioned the training data into subsets of varying sizes (splits of 2, 5, 10, 25, 50, and 100). We then trained the model on each subset for a corresponding number of epochs, such that the total number of optimization steps remained constant across all experiments. For example, training on 1/10th of the data for 10 epochs involves the same number of gradient updates as training on the full dataset for 1 epoch.
+
+Our primary observation from this set of experiments was striking (See Figure~\ref{fig:datadup}): the final performance of the model was largely insensitive to the data splitting strategy. The relationship between error rate and the total volume of data processed (unique data size $\times$ epochs) remained almost identical across all partition schemes. This suggests that, within the tested limits, repeatedly training on a smaller, high-quality dataset is a highly effective strategy. A small amount of unique data, when iterated upon, can unlock performance gains nearly equivalent to those achieved with a much larger corpus of unique data. This underscores the potent efficacy of the reinforcement learning optimization process itself, even when data diversity is constrained.
+
+    % 找到较好的数据重用的方式

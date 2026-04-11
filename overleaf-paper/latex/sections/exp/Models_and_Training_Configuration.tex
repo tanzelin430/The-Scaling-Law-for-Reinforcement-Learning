@@ -1,0 +1,51 @@
+\section{Experimental Setup}
+\label{sec:experimental_setup}
+We describe the experimental setup for studying scaling behavior in RL post-training of LLMs for mathematical reasoning, including the model family, training and evaluation data, and evaluation protocol in this section. Full details are provided in Appendix~\ref{app:exp_details}.
+
+\paragraph{Models and Framework.} 
+We use the Qwen2.5 model family~(0.5B, 1.5B, 3B, 7B, 14B, 32B and 72B parameters)~\citep{qwen2025qwen25technicalreport}, which shares the same architecture, so that parameter count is the only variable in our scaling analysis. All experiments are run with the VeRL framework~\citep{sheng2024hybridflow}, a large-scale RL platform for LLMs ensuring consistency and reproducibility.
+\paragraph{Dataset settings.}The training data is the mathematics subset of the \texttt{guru-RL-92k} dataset from the Reasoning360 project~\citep{cheng2025revisiting}, which is carefully curated through deduplication and difficulty filtering. \tzl{We further sort the problems by increasing difficulty (decreasing pass rate, evaluated by Qwen2.5-7B-Instruct model) to enable curriculum learning}. The evaluation data consists of two parts. To verify proposed scaling law (Eq.~\ref{eq:scaling_law_intro}), we use a held-out set of 500 in-domain math problems sampled from the training distribution. To assess generalization, we evaluate on a broader benchmark suite spanning mathematics 
+(AIME2024~\citep{patel2024aimeaioptimizationmultiple}, AMC2023~\citep{knoveleng_amc23_dataset}, GSM8K~\citep{cobbe2021trainingverifierssolvemath}, MATH500~\citep{lightman2023letsverifystepstep}), code (HumanEval~\citep{chen2021evaluatinglargelanguagemodels}), logic (Zebra Puzzle\citep{Lin_ZeroEval_A_Unified_2024}), and science (SuperGPQA~\citep{pteam2025supergpqascalingllmevaluation}). More details about dataset settings can be found in Appendix \ref{app:datasets}.
+
+\paragraph{Prompt Setting.} To ensure stable behavior during RL training and evaluation, we use structured prompts tailored to each domain. For example, all mathematics problems are prepended with the Chain-of-Thought prompt~\citep{wei2023chainofthoughtpromptingelicitsreasoning}: \textit{``You are a knowledgeable math assistant. Answer the following questions and think step by step''}. More prompt templates for all related domains could be found in Appendix~\ref{app:prompts}.
+
+\paragraph{RL Algorithm.}
+We use Group Relative Policy Optimization~(GRPO)~\citep{shao2024deepseekmathpushinglimitsmathematical} for RL fine-tuning. GRPO estimates advantages by normalizing rewards across responses sampled from the same prompt, yielding a stable signal with lower memory cost. Specifically, for each question $q$, GRPO samples a group of outputs$\{o_1,o_2,\cdots,o_G\}$ from the old policy $\pi_{\theta_{old}}$, and the objective is defined as
+
+\begin{equation}
+\label{eq:GRPO}
+\resizebox{\columnwidth}{!}{$
+\begin{aligned}
+\mathcal{L}_{\text{GRPO}}=
+\frac{1}{G}\sum_{i=1}^{G}\frac{1}{\lvert o_i\rvert}\sum_{t=1}^{\lvert o_i\rvert}
+\Bigl\{
+  \min\Bigl[
+  \rho(\theta)
+      \,\hat A_{i,t},\; 
+      \operatorname{clip}\!\Bigl(
+          \rho(\theta),
+         1-\varepsilon,\,
+         1+\varepsilon
+      \Bigr)\hat A_{i,t}
+  \Bigr]
+  -\beta\,\mathrm{D}_{\mathrm{KL}}
+\Bigr\},
+\end{aligned}
+$}
+\end{equation}
+
+where $\rho(\theta)=\frac{\pi_{\theta}\!\left(o_{i,t}\mid q,\,o_{i,<t}\right)}{\pi_{\theta_{\mathrm{old}}}\!\left(o_{i,t}\mid q,\,o_{i,<t}\right)}$ is the important sampling weight. For each output $o_i$, a reward model or rule is used to yield the reward signal $\mathbf{r}=\{r_1,r_2,\cdots,r_G\}$. The advantage is computed as
+\begin{equation}\label{eq:GRPO-Adv}
+\hat{A}_{i,t} = \frac{r_i - \mathrm{mean}(\mathbf{r})}{\mathrm{std}(\mathbf{r})}.
+\end{equation}
+
+
+\paragraph{Reward Signal and Evaluation Metric.} For training, we use a binary reward signal in mathematical RL process, a reward of $1$ is given for a correct match and $0$ otherwise. For evaluation, we define our primary metric as the test loss ($L$), a proxy for reward-based performance in the RL setting. Formally, $L = 1 - (R / R_{\text{max}})$, where $R$ is the number of correct solutions and $R_{\text{max}}$ the total. \tzl{We adopt the term "test loss" for consistency with foundational neural scaling law literature (\cite{kaplan2020scaling})}. Notably, maximizing reward in RL training is equivalent to minimizing $L$.
+
+
+\paragraph{Fitting and Prediction Protocols.}
+To systematically evaluate the robustness and predictive capability of our derived scaling laws, we employ two distinct fitting protocols throughout our analysis:
+\begin{itemize}
+    \item \textbf{Inter-model Extrapolation:} We fit the scaling law parameters using data from smaller models (0.5B to 32B) to calculate the learning efficiency and predict the performance of the larger model (72B).
+    \item \textbf{Intra-model Extrapolation:} We fit the scaling law using only the early training steps of a specific model to forecast its loss trajectory for the remainder of the training process. 
+\end{itemize}

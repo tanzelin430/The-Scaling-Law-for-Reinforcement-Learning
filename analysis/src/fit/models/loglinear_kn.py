@@ -19,29 +19,32 @@ class LogLinearKn(BaseFitter):
     
     # E0 lookup table parameters
     E0_0_5: float
+    E0_1: float
     E0_1_5: float
     E0_3: float
     E0_7: float
+    E0_8: float
     E0_14: float
     E0_32: float
+    E0_70: float
     E0_72: float
-    
+
     DEFAULT_BOUNDS: ClassVar[tuple] = (
-        [0.0, 0.1e9] + [-10.0] * 7,  # Lower: k_max >= 0, N0 >= 0.1B, E0 >= -10
-        [2.0, 100e9] + [10.0] * 7     # Upper: k_max <= 2, N0 <= 100B, E0 <= 10
+        [0.0, 0.1e9] + [-10.0] * 10,  # Lower: k_max >= 0, N0 >= 0.1B, E0 >= -10
+        [2.0, 100e9] + [10.0] * 10     # Upper: k_max <= 2, N0 <= 100B, E0 <= 10
     )
-    
-    DEFAULT_P0: ClassVar[list] = [0.5, 7e9] + [0.1] * 7  # Initial guess: k_max=0.5, N0=7B, E0=0.1
-    
+
+    DEFAULT_P0: ClassVar[list] = [0.5, 7e9] + [0.1] * 10  # Initial guess: k_max=0.5, N0=7B, E0=0.1
+
     @staticmethod
-    def _build_lookup(k_max, N0, E0_0_5, E0_1_5, E0_3, E0_7, E0_14, E0_32, E0_72):
+    def _build_lookup(k_max, N0, E0_0_5, E0_1, E0_1_5, E0_3, E0_7, E0_8, E0_14, E0_32, E0_70, E0_72):
         """Build lookup table from parameters. Reused by both __post_init__ and model()."""
         return {
             'k_max': k_max,
             'N0': N0,
             'E0': {
-                0.5e9: E0_0_5, 1.5e9: E0_1_5, 3e9: E0_3, 7e9: E0_7,
-                14e9: E0_14, 32e9: E0_32, 72e9: E0_72
+                0.5e9: E0_0_5, 1e9: E0_1, 1.5e9: E0_1_5, 3e9: E0_3, 7e9: E0_7,
+                8e9: E0_8, 14e9: E0_14, 32e9: E0_32, 70e9: E0_70, 72e9: E0_72
             }
         }
     
@@ -50,7 +53,7 @@ class LogLinearKn(BaseFitter):
         """
         Args:
             data: (n, x) tuple of arrays
-            *args: k_max, N0, E0_0_5, E0_1_5, E0_3, E0_7, E0_14, E0_32, E0_72
+            *args: k_max, N0, E0_0_5, E0_1, E0_1_5, E0_3, E0_7, E0_8, E0_14, E0_32, E0_70, E0_72
         """
         n, x = data
         

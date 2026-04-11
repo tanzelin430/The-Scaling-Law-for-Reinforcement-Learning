@@ -1,0 +1,113 @@
+\section{Formula Fitting and Derivation}
+\subsection{FLOPs Calculation Methodology}
+\label{app:flops_calculation}
+The computational cost for a LLM is primarily determined by the number of non-embedding parameters ($N$) and the number of processed tokens ($T$). The costs for the fundamental operations are:
+\begin{itemize}
+    \item \textbf{Forward Pass Cost:} The cost of a single forward pass is approximately $C_{\text{fwd}} \approx 2NT$ FLOPs.
+    \item \textbf{Backward Pass Cost:} The backward pass is approximately twice as expensive as the forward pass, so $C_{\text{bwd}} \approx 4NT$ FLOPs.
+\end{itemize}
+A full training step, which includes one forward and one backward pass for the gradient update, therefore has a total computational cost of:
+\begin{equation}
+    C_{\text{train}} = C_{\text{fwd}} + C_{\text{bwd}} \approx 2NT + 4NT = 6NT \text{ FLOPs.}
+\end{equation}
+\begin{equation}
+    \text{FLOPs}_{\text{step}} = 6 \times N \times T_{\text{step}}
+\end{equation}
+By recording the exact number of processed tokens $T$ per step, we compute the cumulative FLOPs reported throughout this paper as the sum of these per-step calculations over the course of training.
+
+\subsection{Coefficient Comparison}
+\label{app:coeff_comparison}
+We consider the two laws
+\begin{equation}
+    \ln L(N, C) = -\,k_C(N)\,\ln C + E_{C}(N),
+    \label{eq:compute_law_app}
+\end{equation}
+and
+\begin{equation}
+    \ln L(N, D) = -\,k_D(N)\,\ln D + E_{D}(N),
+    \label{eq:data_law_app}
+\end{equation}
+are consistent under the linkage \(C = N D \phi\) where \(\phi>0\) is a constant for simplification.
+
+\medskip
+\noindent\textbf{Claim.}
+Under \(C = N D \phi\), the slopes coincide and the intercepts differ by a known shift:
+\begin{align}
+    k_C(N) &= k_D(N) \;=\; k(N), \label{eq:k_equal}\\
+    E_C(N) &= E_D(N) \;+\; k(N)\,\ln\!\bigl(N\phi\bigr). \label{eq:E_relation}
+\end{align}
+
+\medskip
+\noindent\textit{Proof.}
+Substitute \(C=N D \phi\) into \eqref{eq:compute_law_app}:
+\begin{align*}
+\ln L(N,C)
+&= -k_C(N)\ln(N D \phi) + E_C(N) \\
+&= -k_C(N)\bigl[\ln D + \ln(N\phi)\bigr] + E_C(N) \\
+&= -k_C(N)\ln D \nonumber \\
+&\quad + \Bigl(E_C(N) - k_C(N)\ln(N\phi)\Bigr).
+\end{align*}
+Comparing this with \eqref{eq:data_law_app}, i.e.,
+\(\ln L(N,D) = -\,k_D(N)\,\ln D + E_D(N)\),
+equality for all \(D>0\) forces the coefficients of \(\ln D\) and the constants to match:
+\begin{align*}
+k_D(N)=k_C(N)=:k(N),\\
+E_D(N)=E_C(N)-k(N)\,\ln(N\phi).
+\end{align*}
+Rearranging the second identity yields \eqref{eq:E_relation}.
+
+The observation from Figure~\ref{fig:coef_k_c} and Figure~\ref{fig:coef_k_d} also matches with this conclusion.
+\subsection{Hyper-parameter Fitting}
+We present the uncertainty analysis for raw data and fitting results for hyper parameters in Table~\ref{tab:uncertainty_comparison} and Table~\ref{tab:kn_parameters}.
+\label{app:fitting_4_KE}
+\begin{table*}[tb]
+\centering
+\begin{tabular}{llcccccc}
+\hline
+\multirow{2}{*}{\textbf{Family}} & \multirow{2}{*}{\textbf{Model}} & \multicolumn{3}{c}{\textbf{Base}} & \multicolumn{3}{c}{\textbf{Instruct}} \\
+\cline{3-8}
+& & Test Loss & Avg Std & SEM & Test Loss & Avg Std & SEM \\
+\hline
+\multirow{7}{*}{Qwen2.5} & 0.5B & 0.9419 & 0.0082 & 0.0048 & 0.9458 & 0.0073 & 0.0042 \\
+& 1.5B & 0.9129 & 0.0091 & 0.0053 & 0.8988 & 0.0098 & 0.0057 \\
+& 3B & 0.8582 & 0.0129 & 0.0074 & 0.8281 & 0.0112 & 0.0065 \\
+& 7B & 0.7148 & 0.0147 & 0.0085 & 0.6777 & 0.0142 & 0.0082 \\
+& 14B & 0.6051 & 0.0149 & 0.0086 & 0.5588 & 0.0143 & 0.0083 \\
+& 32B & 0.4937 & 0.0056 & 0.0032 & 0.4579 & 0.0127 & 0.0073 \\
+& 72B & 0.4359 & 0.0143 & 0.0082 & 0.4320 & 0.0140 & 0.0081 \\
+\hline
+\multirow{4}{*}{Llama~3} & 1B & -- & -- & -- & 0.9446 & 0.0085 & 0.0049 \\
+& 3B & -- & -- & -- & 0.8862 & 0.0148 & 0.0086 \\
+& 8B & -- & -- & -- & 0.7558 & 0.0252 & 0.0146 \\
+& 70B & -- & -- & -- & 0.5912 & 0.0368 & 0.0213 \\
+\hline
+\end{tabular}
+\caption{\tzl{Uncertainty Analysis for raw data: Qwen2.5 and Llama~3 Models (Holdout Score)}}
+\label{tab:uncertainty_comparison}
+\end{table*}
+
+\begin{table}[tb]
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Family} & \textbf{Configuration} & \textbf{Scenario} & $K_{max}$ & $N_0$ (B) & $R^2$ \\
+\midrule
+\multirow{8}{*}{Qwen2.5} & Base $L(N,C)$ & Intra & 0.135 & 13.1 & 0.996 \\
+ & Base $L(N,C)$ & Inter & 0.152 & 17.4 & 0.994 \\
+ & Base $L(N,D)$ & Intra & 0.135 & 11.5 & 0.995 \\
+ & Base $L(N,D)$ & Inter & 0.163 & 17.0 & 0.995 \\
+\cline{2-6}
+ & Instruct $L(N,C)$ & Intra & 0.128 & 17.3 & 0.997 \\
+ & Instruct $L(N,C)$ & Inter & 0.144 & 28.3 & 0.995 \\
+ & Instruct $L(N,D)$ & Intra & 0.133 & 17.1 & 0.997 \\
+ & Instruct $L(N,D)$ & Inter & 0.148 & 27.2 & 0.995 \\
+\midrule
+\multirow{2}{*}{Llama~3} & Instruct $L(N,C)$ & Intra & 0.069 & 7.5 & 0.999 \\
+ & Instruct $L(N,D)$ & Intra & 0.071 & 8.6 & 0.999 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Comparison of $K_{max}$ and $N_0$ parameters across model families, fitting scenarios, and scaling dimensions. All fits achieve $R^2 > 0.99$.}
+\label{tab:kn_parameters}
+\end{table}

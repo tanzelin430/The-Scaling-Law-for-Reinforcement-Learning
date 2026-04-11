@@ -1,0 +1,19 @@
+\subsection{Evaluation Protocol}
+
+\subsubsection{Metrics}
+
+We employ two primary metrics to evaluate model performance from different perspectives.
+
+\textbf{Pass@1:} The primary metric for task-level success is Pass@1. This represents the fraction of problems in a test set for which the model generates a correct solution in a single attempt using greedy decoding (with a test-time temperature of 0.7). It is a direct and intuitive measure of the model's practical problem-solving capability.
+
+% \textbf{Intrinsic Performance:} To analyze scaling trends in a principled manner, we adopt the metric of \textit{Intrinsic Performance ($I$)}, as defined by Hilton et al. (2023) in their work on RL scaling laws.[4, 11] Intrinsic performance is defined as the minimum amount of computational resources (compute) required to achieve a given level of performance (return). Formally, for a target return $R^*$, the intrinsic performance is:
+% $$I(R^*) = \min_{M \in \mathcal{M}} C(M, R^*)$$
+% where $\mathcal{M}$ is the family of models and $C(M, R^*)$ is the training compute used by model $M$ to first achieve return $R^*$. In our study, "return" corresponds to the Pass@1 score on the held-out mathematics test set, and "compute" is measured in total floating-point operations (FLOPs). We plot Pass@1 vs. training FLOPs for each model size, and the lower envelope of these curves represents the intrinsic performance frontier.
+
+The application of this metric represents a conceptual bridge, formally framing the LLM fine-tuning process as an RL problem where the "return" is solution correctness. This moves the analysis beyond simply comparing the final performance of models to evaluating the \textit{computational efficiency} with which different model sizes can achieve \textit{any given level of performance}. This provides a more powerful and theoretically grounded approach for understanding scaling, directly connecting our empirical work to the foundational theory of neural scaling laws.[4, 5]
+
+\subsubsection{Verification and Prompts}
+
+\textbf{Reward Generation:} All rewards are binary and determined by a deterministic, rule-based verification process. For each problem, a script extracts the final answer from the model's generated text (e.g., from within a \texttt{\textbackslash boxed\{\}} environment for math problems) and compares it to the ground-truth solution. A reward of $1$ is assigned for a correct match and $0$ otherwise. 
+
+\textbf{Prompt Engineering:} To ensure stable behavior during RL training, we use structured prompts tailored to each domain. For example, all mathematics problems are prepended with the instruction: \textit{"You are a knowledgeable math assistant. Answer the following questions and think step by step"}. For code generation, the prompt is: \textit{"Write a complete, self-contained Python solution..."}. This standardization is crucial for fair comparison across models and tasks, ensuring that observed performance differences are attributable to model capabilities rather than prompt sensitivity.
